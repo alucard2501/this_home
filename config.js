@@ -6,13 +6,13 @@ Config.LOCAL_IP = "192.168.0.119";
 /***硬件组列表 */
 Config.BUSES=["LBus","OBus"];
 /***数据库主机 */
-Config.DB_HOST="localhost";
+Config.DB_HOST="124.173.113.80";
 /***数据库端口 */
 Config.DB_PORT="3306";
 /***数据库用户 */
 Config.DB_USER="root";
 /***数据库密码 */
-Config.DB_PASS="Boat123";
+Config.DB_PASS="boat";
 /***数据库 */
 Config.DB_NAME="db_thishome";
 
