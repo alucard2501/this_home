@@ -6,7 +6,7 @@ Config.LOCAL_IP = "192.168.0.119";
 /***硬件组列表 */
 Config.BUSES=["LBus","OBus"];
 /***数据库主机 */
-Config.DB_HOST="124.173.113.80";
+Config.DB_HOST="124.173.113.81";
 /***数据库端口 */
 Config.DB_PORT="3306";
 /***数据库用户 */
