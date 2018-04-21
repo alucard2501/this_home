@@ -2,7 +2,7 @@ var Config = {};
 /***nodejs监视http请求的端口***/
 Config.HTTP_PORT = "3000";
 /***本机IP***/
-Config.LOCAL_IP = "192.168.1.21";
+Config.LOCAL_IP = "192.168.0.119";
 /***硬件组列表 */
 Config.BUSES=["LBus","OBus"];
 /***数据库主机 */
