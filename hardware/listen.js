@@ -24,6 +24,7 @@ function getClient(){
 
 }
 Handler.timeTickSecond = function () {
+    //console.log(config.QR_CODE_KEY);
     for(var i=0;i<list_bus_server.length;i++){
         var bus_server=list_bus_server[i];
         bus_server.timeTickSecond();

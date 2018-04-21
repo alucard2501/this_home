@@ -1,8 +1,10 @@
+
+
 var Config = {};
 /***nodejs监视http请求的端口***/
 Config.HTTP_PORT = "3000";
 /***本机IP***/
-Config.LOCAL_IP = "192.168.0.119";
+Config.LOCAL_IP = "192.168.1.21";
 /***硬件组列表 */
 Config.BUSES=["LBus","OBus"];
 /***数据库主机 */
@@ -15,6 +17,8 @@ Config.DB_USER="root";
 Config.DB_PASS="boat";
 /***数据库 */
 Config.DB_NAME="db_thishome";
+/***产生二维码用的key */
+Config.QR_CODE_KEY="";
 
 exports.LOCAL_IP = Config.LOCAL_IP;
 exports.HTTP_PORT = Config.HTTP_PORT;
@@ -27,3 +31,4 @@ exports.DB_PORT = Config.DB_PORT;
 exports.DB_USER = Config.DB_USER;
 exports.DB_PASS = Config.DB_PASS;
 exports.DB_NAME = Config.DB_NAME;
+exports.QR_CODE_KEY = Config.QR_CODE_KEY;

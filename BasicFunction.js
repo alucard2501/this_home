@@ -1,5 +1,10 @@
 var logs=[];
-
+var session_list=[
+    {
+        userId:1
+        ,token:"k32423-0d9cse32SK32KD0"
+    }
+];
 function bytes2hex(bytes){
     var result="";
     for(var i=0;i<bytes.length;i++){
@@ -18,3 +23,4 @@ function myLog(text){
 exports.bytes2hex=bytes2hex;
 exports.myLog=myLog;
 exports.logs=logs;
+exports.session_list=session_list;

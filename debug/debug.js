@@ -18,6 +18,9 @@ function register(app){
                 renderLog(result);
                 //console.log("get_log");
                 break;
+            case "get_qrcode":
+                getQRCode(req.query.userId,result);
+                break;
             default:
 
         }
@@ -35,5 +38,7 @@ function renderLog(result){
 function cleanLog(result){
     BasicFunction.logs.splice(0,BasicFunction.logs.length);
 }
-
+function getQRCode(userId,result){
+    var qrstring="userId=";
+}
 //exports.timeTickSecond = Handler.timeTickSecond;
