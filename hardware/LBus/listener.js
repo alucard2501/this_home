@@ -70,7 +70,7 @@ function getBus(addrNet,addrDevice){
     return null;
 }
 function handlerMessage(data,address,port){
-    console.log((new Date).toLocaleString() + ",IP:" +address + ",port:"+port + ",r:" +BasicFunction.bytes2hex(data));
+    BasicFunction.myLog((new Date).toLocaleString() + ",IP:" +address + ",port:"+port + ",r:" +BasicFunction.bytes2hex(data));
     var addr_net=data[3];
     var addr_logic=data[4];
     var code=data[5];

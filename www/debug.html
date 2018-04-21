@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>控制调试</title>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+    function myFunction(){
+        //data.
+        //JSON.parse()
+        var data = $("#Text_Content").val(); 
+        $.ajax({
+            type: "GET",
+            url: "/google_api" ,
+            contentType: "application/json; charset=utf-8",
+            data: data,
+            dataType: 'json',
+            async: true,
+            success: function (response, status, xhr) {
+                alert(response.access_token);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest);
+            }
+        });
+    }
+</script>
+</head>
+<body>
+	<div id="header"><img id="Img_Logo" src="../images/logo_config.png"></div>
+	<div id="main"></div>
+	<div id="main1" style="overflow-y: scroll;position: absolute;z-index: 10;width:80%;left:10%;margin-top:50%;">
+        <div>
+                            <!--
+                {"requestId":"ff36a3cc-ec34-11e6-b1a0-64510650abcf","inputs": [{"intent": "action.devices.SYNC"}]}
+            {"directive":{"header":{"namespace":"Alexa.PowerController","name":"TurnOn","payloadVersion":"3","messageId":"1d7d468c-bdb6-4862-bd1e-b56233cf27fc","correlationToken":"AAAAAAAAAACl7xK0KEEZBxYbmPITJ7lQBAIAAAAAAABC0tCjeUvPILIthEmwsTPS/SGeA3zZGUjgFkPFz0eDQAL3el9aCJxNCdaAfBB/w9nwjI2+33JjuRVVf0nd8P6+08aHUFy9M/62zeBDT+N6ZJ6neM2dcXiaBJxltP7JQnf7AcOYG+HtLNMn8cF74Y3VYq7+gO6PN487FB8OfYuNG5T/izLyy2l/oIW8CN3i/zyJaJes7p+EpWAh0MlA1/lJ4u74ysXN2JSfDr+sbltNhHkWu8paklDnSh8pRVPTK9gifZxZmQYQ1y09V8jjoq8LgYSGLbNOO5nf+2ZqhT9asTTVBNjUTaMd64pm2od+1XneC3l3D14RJvi2eXkAWVVpGjox8pBBGR5ReAg4VHMZFAFqIMJ/LGLHAAt0+5B87869CVYCoTSS2lBVyGagIdxUWG4vbl9ZVcSt4m9F/As0otr1SU9yy+3Itss11MgjMY3lPzfm189MXf/+fxx2e4NYqe0p6if2N9g1UrqAAa8Qi/FIMu7yOCC3QaRYqEqEcdIV5RhC68QyrHpvyDRecEWZPgUJZE9e8/hOpvHPDA79tUaMLAAg1w3Uj8S62wxNb+TXtsRFVLW+B2gtG/IXg9vd/pAtsT3OGfIemFKu1b5yGFndyoPA1Mvhe6lDoDJxtahyknHkXR7Wy0bwFkjj3h+D7fZQmVOj1GxXdXZjhEKxUEFOyR0="},"endpoint":{"scope":{"type":"BearerToken","token":"1gnyfz03i0gtbl3jr2i3qg5g3hni21pp"},"endpointId":"22","cookie":{}},"payload":{}}}    
+            -->
+            <div class="divInputItem"><div class="icon"><i class="fa fa-user fa-2x"></i></div><input type="text" class="text" value="" placeholder="用户名"></div>
+            <div class="divInputItem"><div class="icon"><i class="fa fa-lock fa-2x"></i></div><textarea id="Text_Content" rows="50" style="width:80%">
+                    {"requestId":"17295728272649970292","inputs": [{"intent": "action.devices.SYNC"}]}
+            </textarea></div>
+        </div>
+        <div class="submit"><input type="submit" onClick="myFunction()" value="测试" ></div>
+    </div>
+	<div id="footer"></div>
+</body>
+</html>
