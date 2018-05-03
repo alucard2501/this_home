@@ -1,0 +1,9 @@
+L-Bus
+心跳：
+AA AA 05 01 01 0D 01 5B
+
+O-Bus
+心跳：
+02 FF FF 00 01 02 03 04 FF FF FF FF FF FF FF FF FF FF FF FF 01 30 02 00 00 00 01 FF
+
+测试方法记录

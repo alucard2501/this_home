@@ -4,11 +4,11 @@ var Config = {};
 /***nodejs监视http请求的端口***/
 Config.HTTP_PORT = "3000";
 /***本机IP***/
-Config.LOCAL_IP = "192.168.1.21";
+Config.LOCAL_IP = "192.168.0.119";
 /***硬件组列表 */
 Config.BUSES=["LBus","OBus"];
 /***数据库主机 */
-Config.DB_HOST="124.173.113.80";
+Config.DB_HOST="localhost";
 /***数据库端口 */
 Config.DB_PORT="3306";
 /***数据库用户 */
@@ -32,3 +32,4 @@ exports.DB_USER = Config.DB_USER;
 exports.DB_PASS = Config.DB_PASS;
 exports.DB_NAME = Config.DB_NAME;
 exports.QR_CODE_KEY = Config.QR_CODE_KEY;
+exports.INFO='调试访问页面：http://app.onlytechglobal.com/OnlyTechHome/pages/get_code.html?appid=wxe01620749eed5934&scope=snsapi_base&state=index&redirect_uri=http%3A%2f%2f192.168.0.119%3A3000%2fmobile%2fmain.html';

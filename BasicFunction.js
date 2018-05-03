@@ -1,3 +1,6 @@
+const { StringDecoder } = require('string_decoder');
+const decoder = new StringDecoder('utf8');
+
 var logs=[];
 var session_list=[
     {
@@ -20,6 +23,16 @@ function myLog(text){
         logs.splice(0,1);
     }
 }
+/**
+ * Convert an Uint8Array into a string.
+ *
+ * @returns {String}
+ */
+function DecodeUint8arr(uint8array){
+    return decoder.write(uint8array);
+}
+
+exports.DecodeUint8arr=DecodeUint8arr;
 exports.bytes2hex=bytes2hex;
 exports.myLog=myLog;
 exports.logs=logs;
